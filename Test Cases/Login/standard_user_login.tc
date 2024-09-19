@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>standard_user_login</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>bbf8ba7d-d7cf-4663-bdfa-eb2d39c7659e</testCaseGuid>
+</TestCaseEntity>

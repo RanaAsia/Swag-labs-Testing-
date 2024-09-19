@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>verify Low to Hight price filtering</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d256f47e-4f55-4979-ae8a-ba8264f4b367</testCaseGuid>
+</TestCaseEntity>
