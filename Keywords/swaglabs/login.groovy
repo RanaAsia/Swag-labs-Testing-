@@ -24,9 +24,7 @@ import internal.GlobalVariable
 
 public class LoginActions {
 
-	//	static final TestObject USERNAME = new TestObject().addProperty('css', ConditionType.EQUALS, 'input[id="user-name"]')
-	//	static final TestObject PASSWORD = new TestObject().addProperty('css', ConditionType.EQUALS, 'input[id="password"]')
-	//	static final TestObject LOGIN_BUTTON = new TestObject().addProperty('css', ConditionType.EQUALS, 'input[id="login-button"]')
+	
 
 	static final def LOGIN_BUTTON() {
 		return findTestObject('Object Repository/Login_page/button_login')

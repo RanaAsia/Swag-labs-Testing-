@@ -22,8 +22,7 @@ import com.kms.katalon.core.testobject.ConditionType
 import internal.GlobalVariable
 
 public class LoginVerification {
-	//	static final TestObject PRODUCT_PAGE_TITLE = new TestObject().addProperty('xpath', ConditionType.EQUALS, "//span[@class='title' and text()='Products']")
-	//	static final TestObject ERROR_MESSAGE = new TestObject().addProperty('css', ConditionType.EQUALS, 'div[class="error-message-container error"]')
+
 
 	static final def PRODUCT_PAGE_TITLE() {
 		return findTestObject("Object Repository/Product_page/product_title")

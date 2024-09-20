@@ -24,11 +24,7 @@ import org.openqa.selenium.WebElement
 
 public class CheckoutVerification {
 
-	//	static final TestObject CART_PAGE_BUTTON=new TestObject().addProperty('xpath',ConditionType.EQUALS,"//a[@class='shopping_cart_link']")
-	//	static final TestObject CART_PAGE_TITLE = new TestObject().addProperty('xpath', ConditionType.EQUALS, "//span[@class='title' and text()='Your Cart']")
-	//	static final TestObject CART_ITEM_NAME = new TestObject().addProperty('css', ConditionType.EQUALS, "div.inventory_item_name")
-	//	static final TestObject CART_ITEM_DESCRIPTION = new TestObject().addProperty('css', ConditionType.EQUALS, "div.inventory_item_desc")
-	//	static final TestObject CART_ITEM_PRICE = new TestObject().addProperty('css', ConditionType.EQUALS, "div.inventory_item_price")
+
 	final static def ITEM_TITLE_LINKS() {
 		return findTestObject('Object Repository/Product_page/item_title_links')
 	}
@@ -201,17 +197,17 @@ public class CheckoutVerification {
 	public static void VerifyTotalPrice () {
 		String itemsPriceText = WebUI.getText(findTestObject('Object Repository/Overview_page/item_total')).replace('Item total: $', '').trim()
 		double itemsPeice = Double.parseDouble(itemsPriceText)
-		
+
 		String taxText = WebUI.getText(findTestObject('Object Repository/Overview_page/tax')).replace('Tax: $', '').trim()
 		double tax = Double.parseDouble(taxText)
-		
+
 		double actualTotalPrice= itemsPeice+tax
-		
+
 		String displayedTotalPriceText = WebUI.getText(findTestObject('Object Repository/Overview_page/total_price')).replace('Total: $', '').trim()
 		double displayedTotalPrice = Double.parseDouble(displayedTotalPriceText)
-		
+
 		WebUI.verifyEqual(actualTotalPrice, displayedTotalPrice)
-		
+
 		if (actualTotalPrice == displayedTotalPrice) {
 			WebUI.comment("The calculated total matches the displayed total: " + displayedTotalPrice)
 		} else {

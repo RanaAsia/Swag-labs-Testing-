@@ -29,177 +29,7 @@ import com.kms.katalon.core.testobject.ConditionType
 
 public class CheckoutActions {
 
-	//		public static int SelectRandomItem() {
-	//			// Find all item title links
-	//			List<WebElement> items = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Product_page/item_title_links'), 30)
-	//			int totalItems = items.size()
-	//
-	//			// Generate a random index for the item selection
-	//			Random rand = new Random()
-	//			int index = rand.nextInt(totalItems)
-	//			return index
-	//		}
-	//
-	//
-	//		// Method to retrieve the price of an item based on its index
-	//		public static String getItemPriceAtIndex(int index) {
-	//			// Find all item prices
-	//			List<WebElement> itemsPrices = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Product_page/item_price'), 30)
-	//
-	//			// Convert the WebElement at the specified index to TestObject and get the text (price)
-	//			TestObject targetPrice = WebUI.convertWebElementToTestObject(itemsPrices.get(index))
-	//			String itemPrice = WebUI.getText(targetPrice)
-	//
-	//			return itemPrice
-	//		}
-	//
-	//		// Method to retrieve the description of an item based on its index
-	//		public static String getItemDescriptionAtIndex(int index) {
-	//			// Find all item descriptions
-	//			List<WebElement> itemsDescription = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Product_page/item_description'), 30)
-	//
-	//			// Convert the WebElement at the specified index to TestObject and  the text (description)
-	//			TestObject targetDescription = WebUI.convertWebElementToTestObject(itemsDescription.get(index))
-	//			String itemDescription = WebUI.getText(targetDescription)
-	//
-	//			return itemDescription
-	//		}
-	//
-	//		// Method to retrieve the name of an item based on its index
-	//		public static String getItemNameAtIndex(int index) {
-	//			// Find all item names
-	//			List<WebElement> itemsName = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Product_page/item_name'), 30)
-	//
-	//			// Convert the WebElement at the specified index to TestObject and get the text (name)
-	//			TestObject targetName = WebUI.convertWebElementToTestObject(itemsName.get(index))
-	//			String itemName = WebUI.getText(targetName)
-	//
-	//			return itemName
-	//		}
-	//
-	//		//Method to click the "Add to Cart" button for the item at the specified index
-	//		public static void clickAddToCartAtIndex(int index) {
-	//			// Find all Add to Cart buttons
-	//			List<WebElement> addToCartButtons = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Product_page/add_to_cart_button'), 30)
-	//
-	//			// Convert the WebElement at the specified index to TestObject and perform a click action
-	//			TestObject targetAddToCartButton = WebUI.convertWebElementToTestObject(addToCartButtons.get(index))
-	//			WebUI.click(targetAddToCartButton)
-	//		}
-	//
-	//		// Method to compare items between Product Page and Cart Page
-	//		public static void compareItems(int index) {
-	//			// Retrieve item details from the product page using the random index
-	//			String itemName = getItemNameAtIndex(index)
-	//			String itemDescription = getItemDescriptionAtIndex(index)
-	//			String itemPrice = getItemPriceAtIndex(index)
-	//
-	//			// Navigate to the cart page by clicking the cart button
-	//			WebUI.click(findTestObject('Object Repository/Product_page/page_header/cart_button'))
-	//
-	//			// Ensure the cart page is fully loaded before comparing
-	//			WebUI.waitForPageLoad(10)
-	//
-	//			boolean isCartPageDisplayed = WebUI.verifyElementPresent(findTestObject('Object Repository/Cart_page/cart_title'), 10)
-	//
-	//			if (isCartPageDisplayed) {
-	//				WebUI.comment('Successfully navigated to the Cart page.')
-	//			} else {
-	//				WebUI.comment('Failed to navigate to the Cart page.')
-	//				WebUI.closeBrowser()  // Closes the browser and ends the session
-	//				throw new Exception('Cart page navigation failed. Test execution stopped.')
-	//			}
-	//
-	//			// Retrieve item details from the cart
-	//			String cartItemName = WebUI.getText(findTestObject('Object Repository/Cart_page/cart_item_name'))
-	//			String cartItemDescription = WebUI.getText(findTestObject('Object Repository/Cart_page/cart_item_description'))
-	//			String cartItemPrice = WebUI.getText(findTestObject('Object Repository/Cart_page/cart_item_price'))
-	//
-	//			// Compare the name, description, and price of the product page item with the cart item
-	//			WebUI.verifyEqual(itemName, cartItemName)
-	//			WebUI.verifyEqual(itemDescription, cartItemDescription)
-	//			WebUI.verifyEqual(itemPrice, cartItemPrice)
-	//
-	//			WebUI.closeBrowser()
-	//		}
-	//	////////////////////////////////
-
-	//	public static int SelectRandomItem() {
-	//		// Find all item title links
-	//		List<WebElement> items = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Product_page/item_title_links'), 30)
-	//		int totalItems = items.size()
-	//
-	//		// Generate a random index for the item selection
-	//		Random rand = new Random()
-	//		int index = rand.nextInt(totalItems)
-	//		return index
-	//	}
-	//
-	//	// Method to retrieve the price of an item based on its index
-	//	public static String getItemPriceAtIndex(int index) {
-	//		// Dynamically retrieve the item's price using the index parameter
-	//		String itemPrice = WebUI.getText(findTestObject('Object Repository/Product_page/item_price', [('index'): index]))
-	//
-	//		return itemPrice
-	//	}
-	//
-	//	// Method to retrieve the description of an item based on its index
-	//	public static String getItemDescriptionAtIndex(int index) {
-	//		// Dynamically retrieve the item's description using the index parameter
-	//		String itemDescription = WebUI.getText(findTestObject('Object Repository/Product_page/item_description', [('index'): index]))
-	//
-	//		return itemDescription
-	//	}
-	//
-	//	// Method to retrieve the name of an item based on its index
-	//	public static String getItemNameAtIndex(int index) {
-	//		// Dynamically retrieve the item's name using the index parameter
-	//		String itemName = WebUI.getText(findTestObject('Object Repository/Product_page/item_name', [('index'): index]))
-	//
-	//		return itemName
-	//	}
-	//
-	//	// Method to click the "Add to Cart" button for the item at the specified index
-	//	public static void clickAddToCartAtIndex(int index) {
-	//		// Dynamically click the "Add to Cart" button using the index parameter
-	//		WebUI.click(findTestObject('Object Repository/Product_page/add_to_cart_button', [('index'): index]))
-	//	}
-	//
-	//	// Method to compare items between Product Page and Cart Page
-	//	public static void compareItems(int index) {
-	//		// Retrieve item details from the product page using the random index
-	//		String itemName = getItemNameAtIndex(index)
-	//		String itemDescription = getItemDescriptionAtIndex(index)
-	//		String itemPrice = getItemPriceAtIndex(index)
-	//
-	//		// Navigate to the cart page by clicking the cart button
-	//		WebUI.click(findTestObject('Object Repository/Product_page/page_header/cart_button'))
-	//
-	//		// Ensure the cart page is fully loaded before comparing
-	//		WebUI.waitForPageLoad(10)
-	//
-	//		boolean isCartPageDisplayed = WebUI.verifyElementPresent(findTestObject('Object Repository/Cart_page/cart_title'), 10)
-	//
-	//		if (isCartPageDisplayed) {
-	//			WebUI.comment('Successfully navigated to the Cart page.')
-	//		} else {
-	//			WebUI.comment('Failed to navigate to the Cart page.')
-	//			WebUI.closeBrowser()  // Closes the browser and ends the session
-	//			throw new Exception('Cart page navigation failed. Test execution stopped.')
-	//		}
-	//
-	//		// Retrieve item details from the cart
-	//		String cartItemName = WebUI.getText(findTestObject('Object Repository/Cart_page/cart_item_name'))
-	//		String cartItemDescription = WebUI.getText(findTestObject('Object Repository/Cart_page/cart_item_description'))
-	//		String cartItemPrice = WebUI.getText(findTestObject('Object Repository/Cart_page/cart_item_price'))
-	//
-	//		// Compare the name, description, and price of the product page item with the cart item
-	//		WebUI.verifyEqual(itemName, cartItemName)
-	//		WebUI.verifyEqual(itemDescription, cartItemDescription)
-	//		WebUI.verifyEqual(itemPrice, cartItemPrice)
-	//
-	//		//WebUI.closeBrowser()
-	//	}
+	
 
 	final static def ITEM_TITLE_LINKS() {
 		return findTestObject('Object Repository/Product_page/item_title_links')
@@ -269,15 +99,7 @@ public class CheckoutActions {
 
 
 
-	//static final TestObject ITEM_TITLE_LINKS = new TestObject().addProperty('css', ConditionType.EQUALS, 'a[id^="item_"][id$="_title_link"')
-	//	static final TestObject ITEM_NAME = new TestObject().addProperty('css', ConditionType.EQUALS, "div.inventory_item_name")
-	//	static final TestObject ITEM_DESCRIPTION = new TestObject().addProperty('css', ConditionType.EQUALS, "div.inventory_item_desc")
-	//	static final TestObject ITEM_PRICE = new TestObject().addProperty('css', ConditionType.EQUALS, "div.inventory_item_price")
-	//	static final TestObject ADD_TO_CART_BUTTON = new TestObject().addProperty('css', ConditionType.EQUALS, "button.btn_inventory")
-	//	static final TestObject CHECKOUT_BUTTON = new TestObject().addProperty('css', ConditionType.EQUALS, 'button[class="btn btn_action btn_medium checkout_button "]')
-	//	static final TestObject YOURINFORMATION_PAGE_FIRSTNAME  = new TestObject().addProperty('css', ConditionType.EQUALS, 'input[id="first-name"]')
-	//	static final TestObject YOURINFORMATION_PAGE_LASTNAME  = new TestObject().addProperty('css', ConditionType.EQUALS, 'input[id="last-name"]')
-	//	static final TestObject YOURINFORMATION_POSTAL_CODE = new TestObject().addProperty('css', ConditionType.EQUALS, 'input[id="postal-code"]')
+	
 
 
 	public static int SelectRandomItem() {
@@ -291,18 +113,7 @@ public class CheckoutActions {
 	}
 
 
-	// Method to retrieve the price of an item based on its index
-	//	public static String getItemPriceAtIndex(int index) {
-	//
-	//		String itemPrice = WebUI.getText(ITEM_PRICE(), [('index'): index])
-	//		return itemPrice
-	//	}
-	//
-	//	// Method to retrieve the description of an item based on its index
-	//	public static String getItemDescriptionAtIndex(int index) {
-	//		String itemDescription = WebUI.getText(ITEM_DESCRIPTION(), [('index'): index])
-	//		return itemDescription
-	//	}
+	
 
 	public static String getItemPriceAtIndex(int index) {
 		// Find all item prices
@@ -327,11 +138,6 @@ public class CheckoutActions {
 		return itemDescription
 	}
 
-	// Method to retrieve the name of an item based on its index
-	//	public static String getItemNameAtIndex(int index) {
-	//		String itemName = WebUI.getText(ITEM_NAME(), [('index'): index])
-	//		return itemName
-	//	}
 	public static String getItemNameAtIndex(int index) {
 		// Find all item names
 		List<WebElement> itemsName = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Product_page/item_name'), 30)
@@ -343,11 +149,7 @@ public class CheckoutActions {
 		return itemName
 	}
 
-	// Method to click the "Add to Cart" button for the item at the specified index
-	//	public static void clickAddToCartAtIndex(int index) {
-	//		WebUI.click(ADD_TO_CART_BUTTON(), [('index'): index])
-	//	}
-
+	
 	public static void clickAddToCartAtIndex(int index) {
 		// Find all Add to Cart buttons
 		List<WebElement> addToCartButtons = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Product_page/add_to_cart_button'), 30)
